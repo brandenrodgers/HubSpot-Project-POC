@@ -2,7 +2,6 @@
   "type": "cms-js-rendering",
   "label": "My POC project js rendering",
   "uid": "poc-js-rendering-component",
-  "auth": "poc-auth-component",
   "data": {
     "file": "./cmsJSFile.js"
   }
