@@ -1,0 +1,10 @@
+{
+  "type": "crm-card",
+  "label": "My POC project card 1",
+  "uid": "poc-card-component-1",
+  "auth": "poc-auth-component",
+  "deps": ["poc-library"],
+  "data": {
+    "file": "./Component1.jsx"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "library",
+  "label": "My POC Project Library",
+  "uid": "poc-library",
+  "data": {
+    "exports": {
+      "constants": "./constants.js"
+    }
+  }
+}
