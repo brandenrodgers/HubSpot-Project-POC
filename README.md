@@ -12,8 +12,10 @@ This project contains:
 - Two serverless function components
   - This component also requires auth, which is specified in the component config
 - A CMS JS Rendering component
-- A library component that enables the sharing of code across components
-  - Currently being consumed by the "My POC project card 1" and "My POC project function" components via "deps" in the component config
+
+### Notable structure characteristics
+- Components are able to share code via the `imports` field. This enables components to define internal import paths for external files.
+  - Currently being used by the "My POC project card 1" and "My POC project function" components
 
 ### hscomponent.json config
 Users create project components using the standardizes hscomponent.json configuration file. The supported fields in the config are...
@@ -21,5 +23,8 @@ Users create project components using the standardizes hscomponent.json configur
 - **label:** `(string)` The user-friendly label for this component
 - **uid:** `(string)` The uid of this component
 - **auth:** `(string)` The uid of the auth component that we want to link
-- **deps:** `(array[string])` The uid's of the library components that this component depends on
+- **imports:** `(array[relative_path: string])` Import mappings that allow files within this component to access files outside of the component (following [node subpath import pattern](https://nodejs.org/api/packages.html#subpath-imports))
+  - It is required that these imports begin with `#` so we can differentiate from external packages
+  - **Q:** Should we allow the relative_paths to point to files in other components?
+  - **Q:** Should we allow the relative_paths to point to folders, or just files?
 - **data:** `(object)` Any component-specific config options

@@ -1,4 +1,4 @@
-// NOTE: maybe would require a special type of "HubSpot" import?
-import { SHARED_VARIABLE } from "@HubSpot/poc-library/constants";
+// NOTE: This is made possible by the "imports" we declare in the component config
+import { SHARED_VARIABLE } from "#constants";
 
 // Standard React CRM Card file contents

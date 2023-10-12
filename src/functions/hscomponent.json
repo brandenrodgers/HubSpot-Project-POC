@@ -3,7 +3,9 @@
   "label": "My POC project function",
   "uid": "poc-serverless-component",
   "auth": "poc-auth-component",
-  "deps": ["poc-library"],
+  "imports": {
+    "#constants": "../utils/constants.js"
+  },
   "data": {
     "runtime": "nodejs16.x",
     "functions": {
